@@ -1,0 +1,33 @@
+{
+  "name": "opm-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy_android": "npm run generate && cd opm-cordova && cordova build android",
+    "run_android": "npm run generate && cd opm-cordova && cordova run android --device",
+    "install": "npm install && cd opm-cordova && npm install"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "axios": "^1.1.3",
+    "core-js": "^3.19.3",
+    "nuxt": "^2.15.8",
+    "pug-plain-loader": "^1.1.0",
+    "v-wave": "^1.5.0",
+    "vue": "^2.6.14",
+    "vue-server-renderer": "^2.6.14",
+    "vue-sweetalert2": "^5.0.5",
+    "vue-template-compiler": "^2.6.14",
+    "vuex": "2.5",
+    "vuex-persist": "^3.1.3",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {
+    "sass": "^1.55.0",
+    "sass-loader": "^10.3.1"
+  }
+}
