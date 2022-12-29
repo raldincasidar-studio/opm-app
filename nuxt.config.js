@@ -62,6 +62,6 @@ export default {
 
   axios: {
     // proxy: true
-    baseURL: "http://192.168.8.102:8000/api",
+    baseURL: "http://localhost:8000/api",
   },
 };

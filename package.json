@@ -9,7 +9,7 @@
     "generate": "nuxt generate",
     "deploy_android": "npm run generate && cd opm-cordova && cordova build android",
     "run_android": "npm run generate && cd opm-cordova && cordova run android --device",
-    "install": "npm install && cd opm-cordova && npm install"
+    "inst_all": "npm install && cd opm-cordova && npm install"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",

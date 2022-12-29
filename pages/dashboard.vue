@@ -53,7 +53,7 @@ div.page
     p.center
         img(src="@/assets/img/logo.png" label="Logo")
 
-    h5.stall Stall \#{{auth.stall_no}}
+    h5.stall {{auth.stall_no ? 'Stall # '+auth.stall_no : 'No Stall Number'}}
     h6.name {{auth.firstname}} {{auth.lastname}}
 
     .grid-buttons

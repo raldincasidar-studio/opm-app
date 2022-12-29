@@ -50,19 +50,19 @@ eh
             .content 
                 div.stall-icon
                     i.material-icons store
-                h6.stall Stall \#{{auth.stall_no}}
+                h6.stall {{auth.stall_no ? 'Stall # '+auth.stall_no : 'No Stall Number'}}
                 h6.name {{auth.firstname}} {{auth.lastname}}
 
                 nuxt-link.menu-item.active(to="/dashboard" v-wave)
                     i.material-icons store
                     span Home
-                nuxt-link.menu-item(to="/make-a-payment" v-wave)
+                nuxt-link.menu-item(to="/make-a-payment" v-wave v-if="auth.stall_no")
                     i.material-icons payments
                     span Make A Payment
                 nuxt-link.menu-item(to="/record-history" v-wave)
                     i.material-icons receipt_long
                     span View Record History
-                nuxt-link.menu-item(to="/balance" v-wave)
+                nuxt-link.menu-item(to="/balance" v-wave v-if="auth.stall_no")
                     i.material-icons account_balance
                     span View Balance
                 a.menu-item(@click="logOut" v-wave)

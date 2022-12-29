@@ -25,7 +25,7 @@ import { mapMutations, mapState } from 'vuex';
             password: this.password
           })
         } catch (error) {
-          console.log(err);
+          console.log(error);
 
           this.$swal.fire({
             title: 'Connection Error',

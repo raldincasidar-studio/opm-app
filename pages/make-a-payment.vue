@@ -8,6 +8,23 @@ export default {
   computed: {
     ...mapState('auth', ['auth']),
   },
+  mounted() {
+    if (!this.auth.stall_no) {
+      this.$swal.fire({
+        title: 'You dont have a stall # yet.',
+        text: 'Please contact the Administrator',
+        // toast: true,
+        // timer: 3000,
+        // position: 'top',
+        icon: 'warning',
+        // timerProgressBar: true,
+        showCloseButton: false,
+        // showConfirmButton: false
+      });
+
+      this.$router.replace('/dashboard');
+    }
+  },
   methods: {
     async submitPayment() {
       if (this.reference_number == "") return this.$swal.fire({
